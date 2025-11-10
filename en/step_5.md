@@ -1,7 +1,9 @@
 ## Program the relay and sensor
 
 --- task ---
-Add the libraries needed to access the Pico’s distance and timing functions.
+Extend your working distance test code from Step 4 by adding the relay logic.
+
+Start with your existing script:
 
 --- code ---
 ---
@@ -9,33 +11,40 @@ language: python
 filename: main.py
 line_numbers: true
 line_number_start: 1
-line_highlights: 1-2
+line_highlights: 1-6
 ---
-from picozero import DistanceSensor, DigitalOutputDevice
-from time import sleep, time
+from picozero import DistanceSensor
+from time import sleep
+
+ultra = DistanceSensor(trigger=3, echo=2, max_distance=1.5)  # metres
+
+while True:
+    d = ultra.distance
+    print("Distance:", round(d, 3), "m")
+    sleep(0.2)
 --- /code ---
 
 --- /task ---
 
 --- task ---
-Set up the Pico to read distance from the ultrasonic sensor and control a relay connected to **Pin 15**.
+Import the extra library needed for controlling the relay and add it **above** your existing code.
 
 --- code ---
 ---
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 4
-line_highlights: 4-6
+line_number_start: 1
+line_highlights: 1,4
 ---
-ultra = DistanceSensor(trigger=3, echo=2, max_distance=1.5)
-valve = DigitalOutputDevice(15, active_high=False, initial_value=False)
+from picozero import DistanceSensor, DigitalOutputDevice  # Added relay control
+from time import sleep, time                              # Added time for tracking open state
 --- /code ---
 
 --- /task ---
 
 --- task ---
-Define the threshold and timing variables that will determine when the valve opens and closes.
+Next, create a relay output and some variables **after** the `ultra` setup but before the loop.
 
 --- code ---
 ---
@@ -43,26 +52,15 @@ language: python
 filename: main.py
 line_numbers: true
 line_number_start: 7
-line_highlights: 7-9
+line_highlights: 8-13
 ---
+ultra = DistanceSensor(trigger=3, echo=2, max_distance=1.5)  # metres
+valve = DigitalOutputDevice(15, active_high=False, initial_value=False)  # Relay on GP15
+
 HAND_ON  = 0.10   # 10 cm to open
 HAND_OFF = 0.14   # 14 cm to close
 MIN_OPEN = 0.4    # seconds; avoid rapid cycling
---- /code ---
 
---- /task ---
-
---- task ---
-Create variables to track the current valve state and when it was last opened.
-
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 11
-line_highlights: 11-12
----
 open_since = 0.0
 is_open = False
 --- /code ---
@@ -70,33 +68,37 @@ is_open = False
 --- /task ---
 
 --- task ---
-Write the loop to read distance and switch the relay on and off using hysteresis, preventing rapid flicker.
+Now replace your simple print loop with logic that switches the relay on and off depending on the distance.
 
 --- code ---
 ---
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 14
-line_highlights: 15-26
+line_number_start: 15
+line_highlights: 18-31
 ---
 while True:
     d = ultra.distance
     if d is not None:
         if (not is_open) and (d < HAND_ON):
-            valve.on()
+            valve.on()              # Open the valve
             is_open = True
             open_since = time()
         elif is_open and (d > HAND_OFF) and (time() - open_since >= MIN_OPEN):
-            valve.off()
+            valve.off()             # Close the valve
             is_open = False
-    sleep(0.05)
+
+    # Optional feedback
+    print("Distance:", round(d, 3), "m", "Valve:", "ON" if is_open else "OFF")
+    sleep(0.1)
 --- /code ---
 
 --- /task ---
 
 --- task ---
-Click **Run** and test the tap behaviour:
-- Place your hand within 10 cm → valve opens.
-- Move your hand away → valve closes once past 14 cm and after `MIN_OPEN` time.
+Click **Run** and test your tap:
+- Place your hand within 10 cm → valve turns on.
+- Move your hand away → valve turns off once past 14 cm and after the delay.
+- Watch the distance and valve state print in the Shell.
 --- /task ---
