@@ -1,14 +1,20 @@
-title: Project title in sentence case
+title: Touchless Water Tap
 hero_image: images/banner.png
-description: A short description of the project
+description: This intermediate project uses a Raspberry Pi Pico, the picozero library, an ultrasonic sensor, a relay, and a 12 V solenoid valve to create a hands-free tap. When hands are detected within a set distance the valve opens, and it closes automatically when hands move away, reducing water waste and improving hygiene.
 listed: false
 pdf: false
 steps:
   - title: What you will make
-  - title: Step title
+  - title: Prepare and mount the sensor
     completion:
-      - engaged      
-  - title: Challenge
+      - engaged
+  - title: Wire the circuit
+  - title: Read distance with picozero
+    completion:
+      - internal
+  - title: Program the relay and sensor
+  - title: Stabilise and validate
+  - title: Extensions and challenges
     challenge: true
     completion:
       - external
