@@ -1,4 +1,4 @@
-title: Touchless Water Tap
+title: Touchless Water Faucet
 hero_image: images/banner.png
 description: This intermediate project uses a Raspberry Pi Pico, the picozero library, an ultrasonic sensor, a relay, and a 12 V solenoid valve to create a hands-free tap. When hands are detected within a set distance the valve opens, and it closes automatically when hands move away, reducing water waste and improving hygiene.
 listed: false
