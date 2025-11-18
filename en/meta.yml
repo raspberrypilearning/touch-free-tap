@@ -12,9 +12,10 @@ steps:
   - title: Read distance with picozero
     completion:
       - internal
-  - title: Program the relay and sensor
+  - title: Wire the relay and pump
+  - title: Program the relay and pump
   - title: Stabilise and validate
-  - title: Extensions and challenges
-    challenge: true
     completion:
       - external
+  - title: Challenge
+    challenge: true

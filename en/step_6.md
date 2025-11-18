@@ -1,19 +1,76 @@
-## Test and check
-
-Add basic diagnostics and tune thresholds for your sink geometry and reflections.
+## Program the relay and pump
 
 --- task ---
-Angle the sensor slightly downward; add a short hood if you see false triggers from shiny basins.
+Add the libraries needed to access the Pico’s distance sensor and control the relay.
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 1
+line_highlights: 1-3
+---
+from picozero import DistanceSensor, DigitalOutputDevice
+from time import sleep
+--- /code ---
+
 --- /task ---
 
 --- task ---
-Increase `MIN_OPEN` to 0.6–1.0 s if water hammer or valve chatter occurs.
+Set up the relay and ultrasonic sensor.  The relay will turn on when a hand is within 12 cm of the sensor.
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 4
+line_highlights: 4-7
+---
+valve = DigitalOutputDevice(15, active_high=False)
+
+ultra = DistanceSensor(trigger=3, echo=2, max_distance=1.5, threshold_distance=0.12)
+--- /code ---
+
 --- /task ---
 
 --- task ---
-Log distances every 0.2 s for one minute and note the maximum “idle” distance with no hands. Set `HAND_OFF` comfortably above the largest “hand-present” distance and below idle distance.
+Tell the Pico what to do when a hand is detected and when it moves away.
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 8
+line_highlights: 8-10
+---
+ultra.when_in_range = lambda: valve.on()
+ultra.when_out_of_range = lambda: valve.off()
+--- /code ---
+
 --- /task ---
 
 --- task ---
-Wet-test with a running water supply. Confirm no leaks near electronics. Verify common ground remains intact under load.
+Keep the program running so it can respond to sensor changes.
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 11
+line_highlights: 11-13
+---
+while True:
+    sleep(1)
+--- /code ---
+
+--- /task ---
+
+--- task ---
+Click **Run** and test your tap:
+- Place your hand within 12 cm → the valve opens.
+- Move your hand away → the valve closes.
 --- /task ---

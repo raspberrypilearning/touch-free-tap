@@ -1,13 +1,20 @@
 ## What you will make
 
-Build a **Touchless Water Tap** that uses a Raspberry Pi Pico, the `picozero` library, an ultrasonic sensor, a relay, and a 12 V solenoid valve. When hands are detected within a set distance, the relay opens the valve; when hands move away, it closes.
+Build a **Touchless Water Faucet** that uses a Raspberry Pi Pico, the `picozero` library, an ultrasonic sensor, a relay, and a 12 V solenoid valve. When hands are detected within a set distance, the relay opens the valve; when hands move away, it closes.
 
 **You will need**
-- Raspberry Pi Pico flashed with MicroPython
-- Ultrasonic sensor HC-SR04
-- Single-channel 5 V relay module
-- 12 V DC solenoid water valve + 12 V DC supply
-- Breadboard, jumper wires
-- 2 resistors for a safe Echo divider (e.g., 1 kΩ to Pico, 470 Ω to GND)
-- USB cable for Pico
-- Optional: LED indicator, flow sensor, 3D-printed splash hood
+- **Raspberry Pi Pico** — microcontroller for logic and sensor interfacing.
+- **Ultrasonic Distance Sensor (HC-SR04)** — detects hand distance for touchless control.
+- **5 V Single-Channel Relay Module** — electrically isolates and switches the pump on/off.  
+- **Mini DC Water Pump Module (5–12 V)** — substitutes for a solenoid valve to control water flow.
+- **External DC Supply (5–12 V)** — to power the water pump.  
+- **Arduino USB Power (5 V)** — to power logic circuits.  
+- **Breadboard and jumper wires** — for temporary circuit assembly.
+- **2 resistors (e.g., 1 kΩ and 470 Ω)** — for the ECHO pin voltage divider if required.  
+
+### Optional Enhancements
+
+- **LED Indicator** — visual cue for pump activation.  
+- **Buzzer Module** — audio cue when sensor detects a hand.  
+- **3D-printed housing or splash guard** — fabricated with the 3D printer (ATL Prototyping kit).
+
