@@ -3,11 +3,11 @@
 Create a small, splash-resistant mount so the ultrasonic faces downward towards the basin and ignores stray reflections.
 
 --- task ---
-Cut a small piece of plastic or print a bracket that can hold the HC-SR04 level and add a short “hood” so water splashes do not strike the transducers.
+Cut a small piece of plastic or print a bracket that can hold the ultrasonic sensor level and add a short “hood” so water splashes do not hit the sensor.
 --- /task ---
 
 --- task ---
-Mark and drill two holes for screws or zip ties to secure the sensor. Ensure the bracket keeps the sensor at least 6–8 cm above the expected hand position.
+Mark and drill two holes for screws or zip ties to secure the sensor. Ensure the bracket keeps the sensor at least 6–8 cm above the expected water level.
 --- /task ---
 
 --- task ---

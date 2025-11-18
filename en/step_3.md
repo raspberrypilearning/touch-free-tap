@@ -2,7 +2,6 @@
 
 Connect the sensor and relay to the Pico. Keep Echo at 3.3 V logic with a divider.
 
-
 --- task ---
  
 Set the Raspberry Pi Pico securely on a breadboard or workspace so you can easily access all pins for wiring.

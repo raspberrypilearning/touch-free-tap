@@ -8,11 +8,11 @@ steps:
   - title: Prepare and mount the sensor
     completion:
       - engaged
-  - title: Wire the circuit
+  - title: Wire the sensor circuit
   - title: Read distance with picozero
     completion:
       - internal
-  - title: Wire the relay and pump
+  - title: Wire the relay and pump circuit
   - title: Program the relay and pump
   - title: Stabilise and validate
     completion:
