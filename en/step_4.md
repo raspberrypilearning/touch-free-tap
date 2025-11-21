@@ -1,21 +1,38 @@
-## Read distance with `picozero`
+## Program the Sensor
 
-Verify reliable ranging before touching the relay.
+--- task ---
+Open Thonny and create a new file called `touchless_faucet.py`.
+--- /task ---
 
-```python
-# main.py
+--- task ---
+Add code to measure distance using the ultrasonic sensor.
+
+--- code ---
+---
+language: python
+filename: touchless_faucet.py
+line_numbers: true
+---
+
 from picozero import DistanceSensor
 from time import sleep
 
-ultra = DistanceSensor(trigger=3, echo=2, max_distance=1.5)  # metres
+sensor = DistanceSensor(echo=2, trigger=3)
 
 while True:
-    d = ultra.distance   # metres (float)
-    if d is not None:
-        print("Distance:", round(d, 3), "m")
-    else:
-        print("Out of range")
-    sleep(0.2)
-```
+    d = sensor.distance
+    print("Distance:", round(d, 2), "m")
+    sleep(0.5)
+--- /code ---
 
-**Test:** Move a hand towards the sensor and confirm readings drop smoothly to ~0.06–0.12 m in your setup.
+--- /task ---
+
+--- task ---
+Click **Run**.  
+Move your hand above the sensor — the distance values should change.
+--- /task ---
+
+--- task ---
+Note the distance when the tank is full and when it is empty.  
+This helps set your threshold in the next step.
+--- /task ---
