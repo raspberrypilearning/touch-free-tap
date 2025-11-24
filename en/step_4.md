@@ -22,7 +22,7 @@ sensor = DistanceSensor(echo=2, trigger=3)
 while True:
     d = sensor.distance
     print("Distance:", round(d, 2), "m")
-    sleep(0.5)
+    sleep(0.2)
 --- /code ---
 
 --- /task ---
@@ -30,9 +30,4 @@ while True:
 --- task ---
 Click **Run**.  
 Move your hand above the sensor — the distance values should change.
---- /task ---
-
---- task ---
-Note the distance when the tank is full and when it is empty.  
-This helps set your threshold in the next step.
 --- /task ---
