@@ -1,19 +1,24 @@
-## Test and check
-
-Add basic diagnostics and tune thresholds for your sink geometry and reflections.
+## Challenge
 
 --- task ---
-Angle the sensor slightly downward; add a short hood if you see false triggers from shiny basins.
+Add an **LED status** indicator on GP14 that lights when the tap is on.  
 --- /task ---
 
 --- task ---
-If you hear banging or rattling in the water line when the pump switches on or off, increase `MIN_OPEN` to somewhere between 0.6 and 1.0.
+Add a **buzzer** to sound if the valve stays open for more than 15 seconds.  
+This helps detect possible sensor errors or water wastage.
 --- /task ---
 
 --- task ---
-Log distances every 0.2 s for one minute and note the maximum “idle” distance with no hands. Set `HAND_OFF` comfortably above the largest “hand-present” distance and below idle distance.
+Add a **day/night mode** using a photoresistor or by checking the time, so the tap system powers down at night to save energy.
 --- /task ---
 
 --- task ---
-Wet-test with a running water supply. Confirm no leaks near electronics. Verify common ground remains intact under load.
+Add a **flow sensor** to count litres dispensed and print the total volume to the Shell every minute.  
+You can expand this later to log data to a CSV file for sustainability tracking.
+--- /task ---
+
+--- task ---
+Optional upgrade: Connect to an **IoT service** to upload valve activity or flow data.  
+Collect environmental and use data for logging and analysis.
 --- /task ---
