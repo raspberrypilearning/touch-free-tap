@@ -5,7 +5,7 @@ Connect the sensor and relay to the Pico. Keep Echo at 3.3 V logic with a divide
 --- task ---
  
 Set the Raspberry Pi Pico securely on a breadboard or workspace so you can easily access all pins for wiring.
-![](images/pico_breadboard.png){:width="300px"} 
+![A Raspberry Pi Pico H mounted into a breadboard, aligned with the top row](images/pico_breadboard.png){:width="300px"} 
 
 --- /task ---
 
