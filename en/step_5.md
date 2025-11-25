@@ -9,7 +9,7 @@ The relay works like a switch that keeps the Pico separate from the pump’s big
 Connect the `IN` pin on the relay to `GP15` on the Pico.
 This will act as the pump control signal.
 
-![](images/touchless_faucet_5.png){:width="300px"}
+![](images/touchless_faucet_5.png){:width="600px"}
 
 --- /task ---
 
@@ -18,7 +18,7 @@ This will act as the pump control signal.
 Connect `VCC` to the 5V rail on the breadboard and the `GND` to the `GND` rail on the breadboard..
 The relay coil now shares power with the sensor.
 
-![](images/touchless_faucet_6.png){:width="300px"}
+![](images/touchless_faucet_6.png){:width="600px"}
 
 --- /task ---
 
@@ -28,14 +28,14 @@ The relay coil now shares power with the sensor.
 
 Attach the pump's `+` (red) wire to the positive terminal of your external 5–12 V DC supply (also probably a red wire).
 
-![](images/touchless_faucet_7.png){:width="600px"}
+![](images/touchless_faucet_7.png){:width="800px"}
 
 --- /task ---
 
 --- task ---
 
 Connect the pump's `–` (black) wire to the `COM` (Common) terminal on the relay.
-![](images/touchless_faucet_8.png){:width="600px"}
+![](images/touchless_faucet_8.png){:width="800px"}
 
 --- /task ---
 
@@ -44,7 +44,7 @@ Connect the pump's `–` (black) wire to the `COM` (Common) terminal on the rela
 Then connect the `NO` (Normally Open) terminal to the negative terminal of the DC supply (probably a black wire).
 
 
-![](images/touchless_faucet_9.png){:width="600px"}
+![](images/touchless_faucet_9.png){:width="800px"}
 
 --- /task ---
 
