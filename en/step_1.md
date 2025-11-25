@@ -10,7 +10,7 @@ Build a **Touchless Water Faucet** that uses a Raspberry Pi Pico, the `picozero`
 - **External DC Supply (5–12 V)** — to power the water pump  
 - **USB Power (5 V)** — to power the Pico
 - **Breadboard and jumper wires** — for temporary circuit assembly
-- **2 resistors (e.g., 1 kΩ and 470 Ω)** — for the ECHO pin voltage divider  
+- **2 resistors (1 kΩ and 470 Ω)** — for the ECHO pin voltage divider  
 
 ### Optional Enhancements
 

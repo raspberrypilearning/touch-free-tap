@@ -10,6 +10,13 @@ Set the Raspberry Pi Pico securely on a breadboard or workspace so you can easil
 --- /task ---
 
 --- task ---
+
+Connect the `VBUS` pin to the Power rail on the edge of your breadboard, and any `GND` pin to the ground rail on your breadboard. This will allow multiple devices to use the power supplied by your power supply. 
+![](images/touchless_faucet_0.png){:width="300px"}
+
+--- /task ---
+
+--- task ---
 Connect the `VCC` pin on the ultrasonic sensor to the 5V rail, and the `GND` pin to the `GND` rail on the breadboard.
 This gives the sensor power to operate.
 ![](images/touchless_faucet_1.png){:width="300px"}
