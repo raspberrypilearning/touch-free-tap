@@ -2,7 +2,7 @@
 
 Build a **Touchless Water Faucet** that uses a Raspberry Pi Pico, the `picozero` library, an ultrasonic sensor, a relay, and a 5-12 V DC submersible pump. When hands are detected within a set distance, the relay opens the valve; when hands move away, it closes.
 
-**You will need**
+### You will need:
 - **Raspberry Pi Pico** — microcontroller for running the system
 - **Ultrasonic Distance Sensor (HC-SR04)** — detects hand distance for touchless control
 - **5 V Single-Channel Relay Module** — electrically isolates and switches the pump on/off  
@@ -12,7 +12,7 @@ Build a **Touchless Water Faucet** that uses a Raspberry Pi Pico, the `picozero`
 - **Breadboard and jumper wires** — for temporary circuit assembly
 - **2 resistors (1 kΩ and 470 Ω)** — for the ECHO pin voltage divider  
 
-### Optional Enhancements
+### Optional:
 
 - **LED Indicator** — visual cue for pump activation.  
 - **Buzzer Module** — audio cue when the tap has been on too long 
