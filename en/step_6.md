@@ -7,7 +7,7 @@ Add the `picozero` class needed to control the relay:
 --- code ---
 ---
 language: python
-filename: main.py
+filename: touchless_tap.py
 line_numbers: true
 line_number_start: 1
 line_highlights: 1
@@ -32,7 +32,7 @@ Add a line to set up the `relay` on `Pin 15`:
 --- code ---
 ---
 language: python
-filename: main.py
+filename: touchless_tap.py
 line_numbers: true
 line_number_start: 1
 line_highlights: 4
@@ -57,7 +57,7 @@ In this example; **if** something is closer to the sensor than 12 cm, **then** t
 --- code ---
 ---
 language: python
-filename: main.py
+filename: touchless_tap.py
 line_numbers: true
 line_number_start: 7
 line_highlights: 11-14, 16
