@@ -1,4 +1,4 @@
-## Program the Sensor
+## Read distance with PicoZero
 
 To program the Raspberry Pi Pico, you will need the [Thonny IDE](http://thonny.org/){:target="_blank"} and MicroPython packages installed. 
 
