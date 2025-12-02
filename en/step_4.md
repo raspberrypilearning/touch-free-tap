@@ -34,4 +34,27 @@ while True:
 --- task ---
 Click **Run**.  
 Move your hand in front of the sensor — the distance values should change.
+
+--- collapse ---
+
+---
+
+title: TypeError: can't convert NoneType to float
+
+---
+
+Tip: If you see the error `TypeError: can't convert NoneType to float`
+
+This usually means the distance sensor did not give a proper reading.
+The most common cause is a loose connection, but it could be something else stopping the sensor from working.
+
+Check these things:
+
+- Check that no jumper wires are loose or leaning in the breadboard/circuit.
+- Make sure the sensor is facing an object that is not too close (2cm) or too far away (4m).
+- Check your voltage divider resistors are properly connected
+- Do you have the right `trigger` and `echo` pins set?
+
+--- /collapse ---
+
 --- /task ---
