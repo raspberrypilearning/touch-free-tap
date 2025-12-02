@@ -40,7 +40,7 @@ line_highlights: 4
 from picozero import DistanceSensor, DigitalOutputDevice
 from time import sleep
 
-relay = DigitalOutputDevice(15, active_high=False)
+relay = DigitalOutputDevice(15, active_high=True)
 sensor = DistanceSensor(echo=2, trigger=3)
 
 --- /code ---
