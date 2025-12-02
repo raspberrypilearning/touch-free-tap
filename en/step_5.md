@@ -14,7 +14,7 @@ This tiny jumper tells the relay whether it should switch on when the Pico pin g
 Look closely at the three–pin header on your relay board.
 It will be labelled `H – COM – L`.
 
-![](images/relay.png{:width="300px"}
+![relay board with the h com l jumper header highlighted in red](images/relay.png){:width="300px"}
 
 - `H` = High-trigger (relay turns ON when the signal is HIGH)
 - `L` = Low-trigger (relay turns ON when the signal is LOW)
