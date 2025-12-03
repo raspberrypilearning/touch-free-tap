@@ -19,6 +19,6 @@ You can expand this later to log data to a CSV file for sustainability tracking.
 --- /task ---
 
 --- task ---
-Optional upgrade: Connect to an **IoT service** to upload valve activity or flow data.  
+Connect to an **IoT service** to upload valve activity or flow data.  
 Collect environmental and use data for logging and analysis.
 --- /task ---

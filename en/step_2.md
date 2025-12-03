@@ -13,3 +13,7 @@ Mark and drill two holes for screws or zip ties to secure the sensor. Ensure the
 --- task ---
 Fix the bracket to a safe stand or mock basin. Ensure no conductive parts can short the Pico or relay.
 --- /task ---
+
+This example uses recycled plastic containers, cardboard and a bucket as a simple prototype:
+
+![](images/bucket-tap-diagram.png)
