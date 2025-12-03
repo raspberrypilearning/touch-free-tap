@@ -80,4 +80,9 @@ while True:
 Click **Run** and test your touchless faucet:  
 - Place your hand within **12 cm** → the relay should click and turn the pump on.  
 - Move your hand away so the relay releases and the pump turns off.  
+
+<video controls width="480">
+  <source src="images/touch-free-tap_demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 --- /task ---
