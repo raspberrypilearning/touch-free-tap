@@ -23,19 +23,19 @@ This gives the sensor power to operate.
 --- /task ---
 
 --- task ---
-Use a jumper wire to connect the `TRIG` pin on the sensor to GP3 on the Raspberry Pi Pico.
+Use a jumper wire to connect the `TRIG` pin on the sensor to `GP3` on the Raspberry Pi Pico.
 This pin sends the “ping” signal that starts the distance measurement.
 ![Raspberry Pi Pico H on breadboard with red, black, and blue jumper wires connected to HC-SR04 sensor.](images/touchless_faucet_2.png){:width="300px"}
 --- /task ---
 
 --- task ---
 To protect the Pico’s input pin from 5 V logic, make a voltage divider on the `ECHO` line.
-Start by connecting a 1 kΩ resistor between the `ECHO` pin on the sensor and `GP2` on the Pico.
+Start by connecting a 1kΩ resistor between the `ECHO` pin on the sensor and `GP2` on the Pico.
 ![Raspberry Pi Pico H on breadboard with HC-SR04 sensor and one resistor connected to ground rail.](images/touchless_faucet_3.png){:width="300px"}
 --- /task ---
 
 --- task ---
-Next, connect a 470 Ω resistor between the `ECHO` pin and `GND` on the breadboard.
+Next, connect a 2kΩ resistor between the `ECHO` pin and `GND` on the breadboard.
 This lowers the signal to a safe level (about 3.3 V) for the Pico’s input.
 ![Raspberry Pi Pico H on breadboard with HC-SR04 sensor and two resistors connected between signal and ground lines.](images/touchless_faucet_4.png){:width="300px"}
 --- /task ---
@@ -43,8 +43,8 @@ This lowers the signal to a safe level (about 3.3 V) for the Pico’s input.
 --- task ---
 Double-check your connections:
 
-- The 1 kΩ resistor should run from ECHO → GP2.
-- The 470 Ω resistor should run from ECHO → GND.
+- The 1kΩ resistor should run from ECHO → GP2.
+- The 2kΩ resistor should run from ECHO → GND.
 - There should be no loose wires or crossed connections.
 
 --- /task ---

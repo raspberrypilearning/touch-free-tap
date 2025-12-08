@@ -7,7 +7,8 @@ Open Thonny and create a new file called `touchless_tap.py`.
 --- /task ---
 
 --- task ---
-Add code to measure distance using the ultrasonic sensor.
+
+Add code to measure distance using the ultrasonic sensor and print out the result:
 
 --- code ---
 ---
@@ -33,6 +34,8 @@ while True:
 Click **Run**.  
 Move your hand in front of the sensor — the distance values should change.
 
+![A clip showing a hand moving closer and further from an ultrasonic distance sensr while the numbers on the readout change](images/UDS_distance.gif)
+
 --- collapse ---
 
 ---
@@ -54,7 +57,5 @@ Check these things:
 - Do you have the right `trigger` and `echo` pins set?
 
 --- /collapse ---
-
-![](images/UDS_distance.gif)
 
 --- /task ---
