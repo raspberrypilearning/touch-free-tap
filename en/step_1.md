@@ -20,7 +20,7 @@ Build a **Touchless Water Faucet** that uses a Raspberry Pi Pico, the `picozero`
 
 To program the Raspberry Pi Pico, you will need the [Thonny IDE](http://thonny.org/){:target="_blank"} and MicroPython packages installed. 
 
-[Instructions for this process are available here.](https://learning-admin.raspberrypi.org/en/projects/getting-started-with-the-pico/2){:target="_blank"}
+[Instructions for this process are available here.](https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/2){:target="_blank"} 
 
 
 
