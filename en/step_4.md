@@ -19,7 +19,7 @@ line_numbers: true
 from picozero import DistanceSensor     # import sensor class
 from time import sleep                  # import delay function
 
-sensor = DistanceSensor(echo=14, trigger=15)  # initialise sensor on pins 14 & 15
+sensor = DistanceSensor(echo=14, trigger=15)  # initialise sensor on GP 14 & 15
 
 while True:                                  # repeat forever
     print(round(sensor.distance, 2), "m")     # show distance in metres
