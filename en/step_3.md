@@ -18,7 +18,7 @@ Connect the `VBUS` pin to the Power rail on the edge of your breadboard, and any
 
 --- task ---
 Connect the `VCC` pin on the ultrasonic sensor to the 5V rail, and the `GND` pin to the `GND` rail on the breadboard.
-This gives the sensor power to operate.
+This gives the sensor power to operate. (This configuration of wires will allow for resistors in later tasks.)
 ![Raspberry Pi Pico H on breadboard connected to HC-SR04 ultrasonic sensor using red and black jumper wires.](images/touchless_faucet_1.png){:width="300px"}
 --- /task ---
 
