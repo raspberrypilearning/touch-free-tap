@@ -1,7 +1,7 @@
 ## Challenge
 
 --- task ---
-Add an **LED status** indicator on GP14 that lights when the tap is on.  
+Add an **LED status** indicator on GP13 that lights when the tap is on.  
 --- /task ---
 
 --- task ---
@@ -20,5 +20,5 @@ You can expand this later to log data to a CSV file for sustainability tracking.
 
 --- task ---
 Connect to an **IoT service** to upload valve activity or flow data.  
-Collect environmental and use data for logging and analysis.
+Collect data for logging and analysis.
 --- /task ---
