@@ -1,46 +1,43 @@
-## Read distance with PicoZero
+## Measure distance with PicoZero
 
-To program the Raspberry Pi Pico, you will need the [Thonny IDE](http://thonny.org/){:target="_blank"} and MicroPython packages installed. [Instructions for this process are available here.](https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/2){:target="_blank"}  
+To program the Raspberry Pi Pico, you will need the [Thonny IDE](http://thonny.org/){:target="_blank"} and MicroPython packages installed. [Instructions for this process are available here.](https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/2){:target="_blank"}   
 
 --- task ---
-Open Thonny and create a new file called `touchless_tap.py`.
+Open Thonny and create a new file called `tank_sensor.py`.
 --- /task ---
 
 --- task ---
-
-Add code to measure distance using the ultrasonic sensor and print out the result:
+Add code to measure distance using the ultrasonic sensor.
 
 --- code ---
 ---
 language: python
-filename: touchless_tap.py
+filename: tank_sensor.py
 line_numbers: true
 ---
 
-from picozero import DistanceSensor
-from time import sleep
+from picozero import DistanceSensor     # import sensor class
+from time import sleep                  # import delay function
 
-sensor = DistanceSensor(echo=2, trigger=3)
+sensor = DistanceSensor(echo=14, trigger=15)  # initialise sensor on pins 14 & 15
 
-while True:
-    d = sensor.distance
-    print("Distance:", round(d, 2), "m")
-    sleep(0.2)
+while True:                                  # repeat forever
+    print(round(sensor.distance, 2), "m")     # show distance in metres
+    sleep(0.5)                                # short pause
+
 --- /code ---
 
 --- /task ---
 
 --- task ---
 Click **Run**.  
-Move your hand in front of the sensor — the distance values should change.
-
-![A clip showing a hand moving closer and further from an ultrasonic distance sensr while the numbers on the readout change](images/UDS_distance.gif)
+Move your hand below the sensor — the distance values should change.
 
 --- collapse ---
 
 ---
 
-title: TypeError - can't convert NoneType to float
+title: TypeError -  can't convert NoneType to float
 
 ---
 
@@ -58,4 +55,9 @@ Check these things:
 
 --- /collapse ---
 
+
+![](images/UDS_distance.gif)
+
 --- /task ---
+
+

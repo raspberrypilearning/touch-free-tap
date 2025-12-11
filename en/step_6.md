@@ -12,22 +12,21 @@ line_numbers: true
 line_number_start: 1
 line_highlights: 1
 ---
-from picozero import DistanceSensor, DigitalOutputDevice
-from time import sleep
+from picozero import DistanceSensor, DigitalOutputDevice    # import digital device class too
+from time import sleep                  # import delay function
 
-sensor = DistanceSensor(echo=2, trigger=3)
+sensor = DistanceSensor(echo=14, trigger=15)  # initialise sensor on GP 14 & 15
 
-while True:
-    d = sensor.distance
-    print("Distance:", round(d, 2), "m")
-    sleep(0.5)
+while True:                                  # repeat forever
+    print(round(sensor.distance, 2), "m")     # show distance in metres
+    sleep(0.5)                                # short pause
 --- /code ---
 
 --- /task ---
 
 --- task ---
 
-Add a line to set up the `relay` on `Pin 15`:
+Add a line to set up the `relay` on `GP 28`:
 
 --- code ---
 ---
@@ -40,8 +39,8 @@ line_highlights: 4
 from picozero import DistanceSensor, DigitalOutputDevice
 from time import sleep
 
-relay = DigitalOutputDevice(15, active_high=True)
-sensor = DistanceSensor(echo=2, trigger=3)
+relay = DigitalOutputDevice(28, active_high=True) # initialise relay on GP 28
+sensor = DistanceSensor(echo=14, trigger=15)  # initialise sensor on GP 14 & 15
 
 --- /code ---
 
