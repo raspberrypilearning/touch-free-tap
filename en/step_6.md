@@ -13,11 +13,11 @@ line_number_start: 1
 line_highlights: 1
 ---
 from picozero import DistanceSensor, DigitalOutputDevice    # import digital device class too
-from time import sleep                  # import delay function
+from time import sleep                        # import delay function
 
 sensor = DistanceSensor(echo=14, trigger=15)  # initialise sensor on GP 14 & 15
 
-while True:                                  # repeat forever
+while True:                                   # repeat forever
     print(round(sensor.distance, 2), "m")     # show distance in metres
     sleep(0.5)                                # short pause
 --- /code ---
@@ -39,8 +39,8 @@ line_highlights: 4
 from picozero import DistanceSensor, DigitalOutputDevice
 from time import sleep
 
-relay = DigitalOutputDevice(28, active_high=True) # initialise relay on GP 28
-sensor = DistanceSensor(echo=14, trigger=15)  # initialise sensor on GP 14 & 15
+relay = DigitalOutputDevice(28, active_high=True)   # initialise relay on GP 28
+sensor = DistanceSensor(echo=14, trigger=15)        # initialise sensor on GP 14 & 15
 
 --- /code ---
 
@@ -61,16 +61,16 @@ line_numbers: true
 line_number_start: 7
 line_highlights: 11-14, 16
 ---
-while True:
-    d = sensor.distance
-    print("Distance:", round(d, 2), "m")
+while True:                                  # repeat forever
+    d = sensor.distance                      # set 'd' to sensor measurement value
+    print("Distance:", round(d, 2), "m")     # show distance in metres
 
     if d < 0.12:           # Hand is within 12 cm - adjust this number to change activation distance
         relay.on()         # Turn on the pump
     else:
         relay.off()        # Turn off the pump
 
-    sleep(0.2)
+    sleep(0.5)             # short pause
 --- /code ---
 
 --- /task ---
