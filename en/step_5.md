@@ -40,7 +40,7 @@ It should sit squarely over the two pins—if it is halfway on, the relay will n
 
 --- task ---
 
-Connect the `IN` pin on the relay terminal block to `GP15` on the Pico.
+Connect the `IN` pin on the relay terminal block to `GP28` on the Pico.
 This will act as the pump control signal.
 
 ![Raspberry Pi Pico H connected to HC-SR04 sensor and blue relay module using multiple coloured jumper wires.](images/touchless_faucet_5.png){:width="600px"}
