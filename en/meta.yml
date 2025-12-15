@@ -9,7 +9,7 @@ steps:
     completion:
       - engaged
   - title: Wire the sensor circuit
-  - title: Read distance with picozero
+  - title: Measure distance with picozero
     completion:
       - internal
   - title: Wire the relay and pump circuit
