@@ -1,18 +1,18 @@
-title: Touch-free Tap
+title: Touch-free tap
 hero_image: images/banner.png
-description: This intermediate project uses a Raspberry Pi Pico, the picozero library, an ultrasonic sensor, a relay, and a 12 V solenoid valve to create a hands-free tap. When hands are detected within a set distance the valve opens, and it closes automatically when hands move away, reducing water waste and improving hygiene.
+description: Use a Raspberry Pi Pico, an ultrasonic sensor, a relay, and a pump to create a hands-free tap
 listed: false
 pdf: false
 steps:
   - title: What you will make
-  - title: Prepare and mount the sensor
+  - title: Mount the distance sensor
     completion:
       - engaged
   - title: Wire the sensor circuit
   - title: Measure distance with picozero
     completion:
       - internal
-  - title: Wire the relay and pump circuit
+  - title: Wire the relay and pump
   - title: Program the relay and pump
     completion:
       - external
