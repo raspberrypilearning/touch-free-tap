@@ -1,45 +1,25 @@
 ## What you will make
-OR
-## What you will do - change meta if you use this
 
-A brief description - one or two sentences. 
+Build a **Touchless Water Faucet** that uses a Raspberry Pi Pico, the `picozero` library, an ultrasonic sensor, a relay, and a 5-12 V DC submersible pump. When hands are detected within a set distance, the relay opens the valve; when hands move away, it closes.
 
---- print-only ---
-
-![ALT TEXT](images/IMAGE.png)
-
---- /print-only ---
-
---- no-print ---
-
-[Editor embed](https://editor.raspberrypi.org/en/embed/viewer/project-slug)
-
---- /no-print ---
-
---- no-print ---
-
-Video embed
-
-<video width="640" height="360" controls>
-<source src="images/videoname.mp4" type="video/mp4">
+<video controls width="480">
+  <source src="images/wywm.mp4" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
 
-Youtube embed 
-<html>
-<div style="position: relative; overflow: hidden; padding-top: 56.25%;">
-<iframe style="position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/XXXXXXXXX?rel=0&cc_load_policy=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-</iframe>
-</div><br>
-</html>
-
-Scratch embed
-<div class="scratch-preview">
- <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/XXXXXXXXX/?autostart=false" frameborder="0"></iframe>
-</div>
-
---- /no-print ---
-
 ### You will need:
-- a
-- b
-- c
+- **Raspberry Pi Pico** — microcontroller for running the system
+- **Ultrasonic Distance Sensor (HC-SR04)** — detects hand distance for touchless control
+- **5 V Single-Channel Relay Module** — electrically isolates and switches the pump on/off  
+- **Mini DC Water Pump Module (5–12 V)** — substitutes for a solenoid valve to control water flow
+- **External DC Supply (5–12 V)** — to power the water pump  
+- **USB Power (5 V)** — to power the Pico
+- **Breadboard and jumper wires** — for temporary circuit assembly
+- **2 resistors (1kΩ and 2kΩ)** — for the ECHO pin voltage divider
+- **Housing or mount** — fabricated from recycled materials, or with a 3D printer
+
+To program the Raspberry Pi Pico, you will need the [Thonny IDE](http://thonny.org/){:target="_blank"} and MicroPython packages installed. [Instructions for this process are available here.](https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/2){:target="_blank"} 
+
+
+
+

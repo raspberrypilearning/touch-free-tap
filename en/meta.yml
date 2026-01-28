@@ -1,14 +1,20 @@
-title: Project title in sentence case
+title: Touch-free tap
 hero_image: images/banner.png
-description: A short description of the project
+description: Use a Raspberry Pi Pico, an ultrasonic sensor, a relay, and a pump to create a hands-free tap
 listed: false
 pdf: false
 steps:
   - title: What you will make
-  - title: Step title
+  - title: Mount the distance sensor
     completion:
-      - engaged      
-  - title: Challenge
-    challenge: true
+      - engaged
+  - title: Wire the sensor circuit
+  - title: Measure distance with picozero
+    completion:
+      - internal
+  - title: Wire the relay and pump
+  - title: Program the relay and pump
     completion:
       - external
+  - title: Challenge
+    challenge: true
