@@ -1,7 +1,7 @@
 title: Touch-free tap
 hero_image: images/banner.png
 description: Use a Raspberry Pi Pico, an ultrasonic sensor, a relay, and a pump to create a hands-free tap
-listed: false
+listed: true
 pdf: false
 steps:
   - title: What you will make
