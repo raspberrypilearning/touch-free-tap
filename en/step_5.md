@@ -6,7 +6,7 @@ The relay works like a switch that keeps the Raspberry Pi Pico separate from the
 
 ### Set the relay's trigger mode
 
-Before you can control the relay from the Raspberry Pi Pico, you must set the relay's trigger jumper correctly. This tiny jumper tells the relay whether it should switch on when the Raspberry Pi Pico pin is set to **high** or **low**.
+Before you can control the relay from the Raspberry Pi Pico, you must set the relay's trigger jumper correctly. This tiny jumper tells the relay whether it should switch on when the Raspberry Pi Pico pin is set to **HIGH** or **LOW**.
 
 --- task ---
 
