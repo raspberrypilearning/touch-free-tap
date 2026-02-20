@@ -6,7 +6,8 @@ The relay works like a switch that keeps the Raspberry Pi Pico separate from the
 
 ### Set the relay's trigger mode
 
-Before you can control the relay from the Raspberry Pi Pico, you must set the relay's trigger jumper correctly. This tiny jumper tells the relay whether it should switch on when the Raspberry Pi Pico pin is set to **HIGH** or **LOW**.
+Before you can control the relay from the Raspberry Pi Pico, you must set the relay's trigger jumper correctly. This tiny jumper tells the relay whether it should switch on when the Raspberry Pi Pico pin is set to **high** or **low**.
+
 
 --- task ---
 
@@ -27,6 +28,7 @@ This will put the relay into high-trigger mode. You will add code for the Raspbe
 
 --- /task ---
 
+
 --- task ---
 
 Slide the jumper so that it firmly connects **COM** and **H**. It should sit squarely over the two pins — if it is not positioned securely, the relay will not behave correctly.
@@ -34,6 +36,7 @@ Slide the jumper so that it firmly connects **COM** and **H**. It should sit squ
 ![The jumper connected across COM and H.](images/jumper.png){:width="300px"}
 
 --- /task ---
+
 
 --- task ---
 
@@ -43,15 +46,18 @@ Connect the **IN** pin on the relay terminal block to **GP28** on the Raspberry 
 
 --- /task ---
 
+
 --- task ---
 
-Connect **VCC** on the relay terminal block to the 5V rail on the breadboard, and connect **GND** to the ground rail on the breadboard. The relay coil now shares power with the sensor.
+Connect **VCC** on the relay terminal block to the 5V rail on the breadboard, and connect **GND** to the ground rail on the breadboard (or closest GND pin, as is shown in the diagram here). The relay coil now shares power with the sensor.
 
-![VCC and GND on the relay have been connected to the 5V and ground rails on the breadboard with jumper wires.](images/touchless_faucet_6.png){:width="600px"}
+![VCC and GND on the relay have been connected to the 5V rail and a GND pin on the breadboard with jumper wires.](images/touchless_faucet_6.png){:width="600px"}
 
 --- /task ---
 
+
 ### Connect the mini DC water pump
+
 
 --- task ---
 
@@ -60,6 +66,7 @@ Connect the pump's **+** (usually red) wire to the positive terminal of your ext
 ![The pump's positive wire has been connected to the positive terminal of a 9V battery with a jumper wire.](images/touchless_faucet_7.png){:width="800px"}
 
 --- /task ---
+
 
 --- task ---
 
