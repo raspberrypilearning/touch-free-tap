@@ -25,7 +25,7 @@ from picozero import DistanceSensor     # import sensor class
 from time import sleep                  # import delay function
 
 
-sensor = DistanceSensor(echo=14, trigger=15)  # initialise sensor on GP 14 & 15
+sensor = DistanceSensor(echo=2, trigger=3)    # initialise sensor on GP 2 & 3
 
 
 while True:                                   # repeat forever
@@ -113,7 +113,7 @@ line_numbers: true
 from picozero import DistanceSensor     # import sensor class
 from time import sleep                  # import delay function
 
-sensor = DistanceSensor(echo=14, trigger=15)  # initialise sensor on GP 14 & 15
+sensor = DistanceSensor(echo=2, trigger=3)    # initialise sensor on GP 2 & 3
 
 while True:                                   # repeat forever
    d = sensor.distance                       # set 'd' to sensor measurement value
