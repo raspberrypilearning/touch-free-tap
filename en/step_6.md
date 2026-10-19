@@ -16,7 +16,7 @@ line_highlights: 1
 from picozero import DistanceSensor, DigitalOutputDevice    # import digital device class too
 from time import sleep                       
 
-sensor = DistanceSensor(echo=14, trigger=15) 
+sensor = DistanceSensor(echo=2, trigger=3) 
 
 while True:                                  
    d = sensor.distance                      
@@ -44,7 +44,7 @@ from picozero import DistanceSensor, DigitalOutputDevice
 from time import sleep
 
 relay = DigitalOutputDevice(28, active_high=True)   # initialise relay on GP28
-sensor = DistanceSensor(echo=14, trigger=15)       
+sensor = DistanceSensor(echo=2, trigger=3)       
 
 --- /code ---
 
